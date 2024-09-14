@@ -12,6 +12,7 @@ button {
     color: white;
     border: 0px;
     font-size: xx-large;
+    left: 0;
 }
 
 a {
@@ -84,6 +85,7 @@ h2 {
     font-family: SpecialElite;
     color: white;
     font-size: x-large;
+    width: 100px;
 }
 
 .stats-games-spacer {

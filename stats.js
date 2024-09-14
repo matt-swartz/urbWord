@@ -27,7 +27,12 @@ function initStats() {
 
     // Update the text content of the <th> element
     gamesPlayed.textContent = stats.gamesPlayed.toString();
-    winPercentage.textContent = (stats.wins/stats.gamesPlayed * 100).toString();
+    // Check if there have been no games played
+    if (stats.gamesPlayed == 0) {
+        winPercentage.textContent = "0"
+    } else {
+        winPercentage.textContent = (stats.wins/stats.gamesPlayed * 100).toString();
+    }
     currentStreak.textContent = stats.currentStreak.toString();
     maxStreak.textContent = stats.maxStreak.toString();
     // firstGuess.textContent = '1: ${firstGuess} game(s)';
