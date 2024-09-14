@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(0, 25.5, 51);
+}
+
+button {
+    background-color: rgb(0, 25.5, 51);
+    color: white;
+    border: 0px;
+    font-size: xx-large;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    margin: 0 15px;
+}
+
+p {
+    color: white;
+    margin: 0 15px;
+}
+
+a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: underline;
+}

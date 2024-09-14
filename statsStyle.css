@@ -1,0 +1,100 @@
+@font-face {
+    font-family: SpecialElite;
+    src: url(SpecialElite.ttf);
+}
+
+body {
+    background-color: rgb(0, 25.5, 51);
+}
+
+button {
+    background-color: rgb(0, 25.5, 51);
+    color: white;
+    border: 0px;
+    font-size: xx-large;
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.def-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: SpecialElite;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(38, 46, 60);
+    color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: SpecialElite;
+    color: white;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image {
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+}
+
+h2 {
+    font-family: SpecialElite;
+    color: white;
+}
+
+#statistics {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stats-games-played-title {
+    text-align: center;
+    font-family: SpecialElite;
+    color: white;
+    font-size: x-large;
+}
+
+.stats-games-title {
+    text-align: center;
+    font-family: SpecialElite;
+    color: white;
+    font-size: x-large;
+}
+
+.stats-games-subtitle {
+    text-align: center;
+    font-family: SpecialElite;
+    color: white;
+    font-size: x-large;
+}
+
+.stats-games-spacer {
+    text-align: center;
+    font-family: SpecialElite;
+    color: rgb(0, 25.5, 51);
+    font-size: x-large;
+}
+
+#guess-distribution {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
