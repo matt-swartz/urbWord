@@ -1,6 +1,6 @@
 import { WORDS } from "./words.js";
 
-const NUMBER_OF_GUESSES = 5;
+const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let letterColors = [];
@@ -12,7 +12,7 @@ console.log(rightGuessString);
 function initBoard() {
   let board = document.getElementById("game-board");
 
-  for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
+  for (let i = 0; i < 5; i++) {
     let row = document.createElement("div");
     row.className = "letter-row";
 
@@ -45,7 +45,7 @@ function shadeKeyBoard(letter, color) {
 }
 
 function deleteLetter() {
-  let row = document.getElementsByClassName("letter-row")[5 - guessesRemaining];
+  let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
   let box = row.children[nextLetter - 1];
   box.textContent = "";
   box.classList.remove("filled-box");
@@ -54,7 +54,7 @@ function deleteLetter() {
 }
 
 function checkGuess() {
-  let row = document.getElementsByClassName("letter-row")[5 - guessesRemaining];
+  let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
   let guessString = "";
   let rightGuess = Array.from(rightGuessString);
 
@@ -64,11 +64,6 @@ function checkGuess() {
 
   if (guessString.length != 5) {
     toastr.error("Not enough letters!");
-    return;
-  }
-
-  if (!WORDS.includes(guessString)) {
-    toastr.error("Word not in list!");
     return;
   }
 
@@ -133,7 +128,7 @@ function insertLetter(pressedKey) {
   }
   pressedKey = pressedKey.toLowerCase();
 
-  let row = document.getElementsByClassName("letter-row")[5 - guessesRemaining];
+  let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
   let box = row.children[nextLetter];
   animateCSS(box, "pulse");
   box.textContent = pressedKey;
@@ -169,7 +164,7 @@ function recordGameResult(isWin, guessNumber) {
   localStorage.setItem('guessNumber', JSON.stringify(guessNumber));
   localStorage.setItem('letterColors', JSON.stringify(letterColors));
   localStorage.setItem('wordOfDay', JSON.stringify(rightGuessString));
-  
+
   // Go to the stats page
   setTimeout(function() {
     window.location.href = "statistics.html?word=" + rightGuessString;

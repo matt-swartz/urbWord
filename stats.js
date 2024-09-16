@@ -31,7 +31,8 @@ function initStats() {
     if (stats.gamesPlayed == 0) {
         winPercentage.textContent = "0"
     } else {
-        winPercentage.textContent = (stats.wins/stats.gamesPlayed * 100).toString();
+        // ~~ rounds the percentage to a whole number
+        winPercentage.textContent = ~~(stats.wins/stats.gamesPlayed * 100).toString();
     }
     currentStreak.textContent = stats.currentStreak.toString();
     maxStreak.textContent = stats.maxStreak.toString();
