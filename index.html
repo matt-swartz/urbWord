@@ -27,6 +27,15 @@
       </button>
     </h1>
 
+    <div id="loading-overlay" aria-hidden="true">
+      <div class="loading-content">
+        <div class="spinner" id="loading-spinner" aria-hidden="true"></div>
+        <div class="loading-text" id="loading-text">Loading word of the day...</div>
+        <div class="loading-error" id="loading-error" style="display:none;color:#ffdddd;"></div>
+        <button id="retry-button" class="retry-button" style="display:none">Retry</button>
+      </div>
+    </div>
+
     <div id="game-board">
       <div class="letter-row">
         <div class="letter-box" style="--animate-duration: 0.3s;"></div>
